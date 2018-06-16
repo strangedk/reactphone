@@ -15,11 +15,8 @@ class App extends Component {
   getNextImage = () => {
     fetch("https://dog.ceo/api/breeds/image/random")
       .then((response) => { return response.json() })
-      .then((result) => {
-        this.setState({
-          message: result.message,
-          result: result
-        });
+      .then(({ message, status }) => {
+        this.setState({ message, status });
         setTimeout(this.getNextImage, 2000);
     })
   }
@@ -34,7 +31,7 @@ class App extends Component {
         <p className="App-intro">
           {this.state.message}
         </p>
-        <small>{this.state.result}</small>
+        <small>{this.state.status}</small>
       </div>
     );
   }
