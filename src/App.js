@@ -14,7 +14,8 @@ class App extends Component {
   
   getNextImage = () => {
     fetch("https://dog.ceo/api/breeds/image/random")
-      .then((result) => {
+      .then((response) => {
+      let result = response.json();
       this.setState({
         message: result.message,
         result: result
@@ -34,7 +35,7 @@ class App extends Component {
         <p className="App-intro">
           {this.state.message}
         </p>
-        <small>{this.state.result.toString()}</small>
+        <small>{this.state.result}</small>
       </div>
     );
   }
