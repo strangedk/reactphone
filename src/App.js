@@ -37,11 +37,11 @@ class App extends Component {
   render() {
     const { dogs } = this.state;
     
+    let list = dogs.map(dog => <img className="Dog" key={dog} src={dog} />);
+    
     return (
       <div className="App">
-        {
-          dogs.map(dog => <img className="Dog" key={dog} src={dog} />);
-        }
+       {list}
       </div>
     );
   }
