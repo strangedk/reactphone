@@ -1,13 +1,8 @@
-.App {
-  animation: Slide infinite 2s linear;
-  vertical-align: middle;
-}
-
 .Dog {
-
+  animation: Trans 1s linear;
 }
 
-@keyframes Slide {
-  from { transform: translate(0, 0); }
-  to { transform: translate(0, 200px); }
+@keyframes Trans {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
