@@ -27,7 +27,7 @@ class App extends Component {
   addDog = (dog) => {
     const { dogs } = this.state;
     
-    if (dogs.length > 5)
+    if (dogs.length > this.max)
       dogs.shift();
     dogs.push(dog);
     
