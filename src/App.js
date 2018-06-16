@@ -9,7 +9,7 @@ class App extends Component {
     this.state = { dogs: [] }
   }
   
-  delay = 1000;
+  delay = 2000;
   max = 15;
   
   componentDidMount() {
@@ -39,7 +39,7 @@ class App extends Component {
     const { dogs } = this.state;
     
     let list = dogs.map((dog) => {
-      let name = dog.substr(dog.lastIndexOf("/", dog.lastIndexOf("/") - 1), dog.lastIndexOf("/"));
+      let name = dog.substring(dog.lastIndexOf("/", dog.lastIndexOf("/") - 1), dog.lastIndexOf("/"));
       
       return (
         <div key={dog}>
