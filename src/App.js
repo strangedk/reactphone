@@ -9,7 +9,7 @@ class App extends Component {
     this.state = { dogs: [] }
   }
   
-  max = 5;
+  max = 15;
   
   componentDidMount() {
     this.getNextImage();
