@@ -26,7 +26,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={this.state.message} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to livecoding</h1>
+          <h1 className="App-title">Dog show</h1>
         </header>
         <p className="App-intro">
           {this.state.message}
