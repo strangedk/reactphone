@@ -42,7 +42,7 @@ class App extends Component {
     // <img className="Dog" key={dog} src={dog} />
     
     return (
-      <div className="App">
+      <div>
        {list}
       </div>
     );
