@@ -1,6 +1,6 @@
 .Dog {
   animation: Trans 1s linear;
-  display: block;
+  display: inline-block;
 }
 
 @keyframes Trans {
