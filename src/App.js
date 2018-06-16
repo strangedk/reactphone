@@ -34,7 +34,7 @@ class App extends Component {
         <p className="App-intro">
           {this.state.message}
         </p>
-        <small>{this.state.result}</small>
+        <small>{this.state.result.toString()}</small>
       </div>
     );
   }
