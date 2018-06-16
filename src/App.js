@@ -38,8 +38,16 @@ class App extends Component {
   render() {
     const { dogs } = this.state;
     
-    // let list = dogs.map(dog => <img className="Dog" key={dog} src={dog} />);
-    let list = dogs.map(dog => <div>{dog.substring(dog.lastIndexOf("/", dog.lastIndexOf("/")-1), dog.lastIndexOf("/"))}</div>);
+    let list = dogs.map((dog) => {
+      let name = dog.substr(dog.lastIndexOf("/", dog.lastIndexOf("/") - 1), dog.lastIndexOf("/"));
+      
+      return (
+        <div key={dog}>
+          <small>{name}</small>
+          <img className="Dog" src={dog} />
+        </div>
+      );
+    });
 
     return (
       <div>
