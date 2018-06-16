@@ -37,10 +37,9 @@ class App extends Component {
   render() {
     const { dogs } = this.state;
     
-    let list = dogs.map(dog => <div>{dog}</div>);
-                        
-    // <img className="Dog" key={dog} src={dog} />
-    
+    // let list = dogs.map(dog => <img className="Dog" key={dog} src={dog} />);
+    let list = dogs.map(dog => {dog.substring(10)} />);
+
     return (
       <div>
        {list}
