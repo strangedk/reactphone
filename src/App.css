@@ -4,7 +4,8 @@
 
 .App-logo {
   animation: App-logo-spin infinite 5s linear;
-  height: 80px;
+  width: 100%;
+  padding-top: 100%;
   border-radius: 50%;
 }
 
