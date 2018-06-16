@@ -40,7 +40,7 @@ class App extends Component {
     return (
       <div className="App">
         {
-          dogs.map((dog) => { return <img className="Dog" src={dog} /> });
+          dogs.map(dog => <img className="Dog" key={dog} src={dog} />);
         }
       </div>
     );
