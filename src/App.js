@@ -15,7 +15,10 @@ class App extends Component {
   getNextImage = () => {
     fetch("https://dog.ceo/api/breeds/image/random")
       .then((result) => {
-      this.setState({ message: result.message, result });
+      this.setState({
+        message: result.message,
+        result: result
+      });
       
       setTimeout(this.getNextImage, 2000);
     });
