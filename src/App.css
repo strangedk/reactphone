@@ -4,10 +4,6 @@
 
 .App-logo {
   animation: App-logo-spin infinite 5s linear;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
   border-radius: 50%;
 }
 
