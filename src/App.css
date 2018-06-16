@@ -1,12 +1,13 @@
 .App {
-}
-
-.Dog {
-  animation: App-logo-spin infinite 5s linear;
+  animation: Slide infinite 5s linear;
   vertical-align: middle;
 }
 
-@keyframes App-logo-spin {
+.Dog {
+
+}
+
+@keyframes Slide {
   from { transform: translate(0, 0); }
-  to { transform: translate(0, 300px); }
+  to { transform: translate(0, 2048px); }
 }
