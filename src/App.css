@@ -1,5 +1,6 @@
 .App {
-  height: 500px;
+  display: inline-block;
+  height: 100%;
 }
 
 .Top {
