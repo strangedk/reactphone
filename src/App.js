@@ -42,9 +42,9 @@ class App extends Component {
       let name = dog.substring(dog.lastIndexOf("/", dog.lastIndexOf("/") - 1), dog.lastIndexOf("/"));
       
       return (
-        <div key={dog}>
+        <div key={dog} className="Dog">
           <small>{name}</small>
-          <img className="Dog" src={dog} />
+          <img src={dog} />
         </div>
       );
     });
