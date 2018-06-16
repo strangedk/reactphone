@@ -23,12 +23,14 @@ class App extends Component {
   
   render() {
     return (
-      <div className="App">
+      <div className="Top">
         <div className="App-header">
           <img src={this.state.message} className="App-logo" />
         </div>
-        <p className="App-intro">{this.state.message}</p>
-        <small>{this.state.status}</small>
+        <div className="Bottom">
+          <p className="App-intro">{this.state.message}</p>
+          <small>{this.state.status}</small>
+        </div>
       </div>
     );
   }
