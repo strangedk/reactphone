@@ -9,6 +9,7 @@ class App extends Component {
     this.state = { dogs: [] }
   }
   
+  delay = 1000;
   max = 15;
   
   componentDidMount() {
@@ -20,7 +21,7 @@ class App extends Component {
       .then((response) => { return response.json() })
       .then(({ message, status }) => {
         this.addDog(message);
-        setTimeout(this.getNextImage, 2000);
+        setTimeout(this.getNextImage, this.delay);
     })
   }
   
@@ -31,7 +32,7 @@ class App extends Component {
       dogs.shift();
     dogs.push(dog);
     
-    this.setState({ dogs });
+    this.setState({ dogs: dogs.reverse() });
   }
   
   render() {
