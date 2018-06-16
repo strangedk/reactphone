@@ -9,7 +9,7 @@ class App extends Component {
     this.state = { dogs: [] }
   }
   
-  delay = 2000;
+  delay = 500;
   max = 15;
   
   componentDidMount() {
