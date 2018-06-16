@@ -1,5 +1,5 @@
 .App {
-  animation: Slide infinite 10s linear;
+  animation: Slide infinite 2s linear;
   vertical-align: middle;
 }
 
@@ -9,5 +9,5 @@
 
 @keyframes Slide {
   from { transform: translate(0, 0); }
-  to { transform: translate(0, 600px); }
+  to { transform: translate(0, 200px); }
 }
