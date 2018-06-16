@@ -32,7 +32,7 @@ class App extends Component {
       dogs.length--;
     dogs.unshift(dog);
     
-    this.setState({ dogs: dogs.reverse() });
+    this.setState({ dogs });
   }
   
   render() {
