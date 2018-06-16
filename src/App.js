@@ -29,8 +29,8 @@ class App extends Component {
     const { dogs } = this.state;
     
     if (dogs.length > this.max)
-      dogs.shift();
-    dogs.push(dog);
+      dogs.length--;
+    dogs.unshift(dog);
     
     this.setState({ dogs: dogs.reverse() });
   }
