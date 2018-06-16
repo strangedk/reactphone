@@ -1,26 +1,12 @@
 .App {
-  display: inline-block;
-  height: 100%;
 }
 
-.Top {
-  text-align: center;
-  height: 50%;
-}
-
-.Bottom {
-  text-align: center;
-  height: 50%;
-}
-
-.App-logo {
+.Dog {
   animation: App-logo-spin infinite 5s linear;
-  height: 80px;
   vertical-align: middle;
-  clip-path: circle(40px at center);
 }
 
 @keyframes App-logo-spin {
-  from { transform: scale(0); }
-  to { transform: scale(3); }
+  from { transform: translate(0, 0); }
+  to { transform: translate(0, 300px); }
 }
