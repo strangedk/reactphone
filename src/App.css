@@ -1,5 +1,6 @@
 .Dog {
-  animation: Trans 5s linear;
+  animation: Trans 1s linear;
+  width: 100%;
 }
 
 .Dog small {

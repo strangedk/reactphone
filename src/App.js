@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
@@ -9,8 +8,8 @@ class App extends Component {
     this.state = { dogs: [] }
   }
   
-  delay = 2400;
-  max = 15;
+  delay = 3000;
+  max = 10;
   
   componentDidMount() {
     this.getNextImage();
@@ -39,12 +38,12 @@ class App extends Component {
     const { dogs } = this.state;
     
     let list = dogs.map((dog) => {
-      let name = dog.substring(dog.lastIndexOf("/", dog.lastIndexOf("/") - 1), dog.lastIndexOf("/"));
+      let name = dog.substring(dog.lastIndexOf("/", dog.lastIndexOf("/") - 1) + 1, dog.lastIndexOf("/"));
       
       return (
         <div key={dog} className="Dog">
           <div>{name}</div>
-          <img src={dog} />
+          <img src={dog} alt="" />
         </div>
       );
     });
