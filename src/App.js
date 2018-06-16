@@ -14,15 +14,14 @@ class App extends Component {
   
   getNextImage = () => {
     fetch("https://dog.ceo/api/breeds/image/random")
-      .then((response) => {
-      let result = response.json();
-      this.setState({
-        message: result.message,
-        result: result
-      });
-      
-      setTimeout(this.getNextImage, 2000);
-    });
+      .then((response) => { return response.json() })
+      .then((result) => {
+        this.setState({
+          message: result.message,
+          result: result
+        });
+        setTimeout(this.getNextImage, 2000);
+    })
   }
   
   render() {
