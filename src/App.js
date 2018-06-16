@@ -4,14 +4,23 @@ import './App.css';
 
 class App extends Component {
   constructor() {
+    super();
     this.state = { message: "" }
   }
+  
+  componentDidMount() {
+    this.getNextImage();
+  }
+  
   getNextImage = () => {
     fetch("https://dog.ceo/api/breeds/image/random")
       .then(({ message }) => {
       this.setState({ message });
+      
+      setTimeout(this.getNextImage, 2000);
     });
   }
+  
   render() {
     return (
       <div className="App">
