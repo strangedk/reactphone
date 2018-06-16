@@ -9,5 +9,5 @@
 
 @keyframes Slide {
   from { transform: translate(0, 0); }
-  to { transform: translate(0, 2048px); }
+  to { transform: translate(0, 300px); }
 }
