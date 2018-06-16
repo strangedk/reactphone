@@ -3,10 +3,13 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  
   constructor() {
     super();
-    this.state = { message: "" }
+    this.state = { dogs: [] }
   }
+  
+  max = 5;
   
   componentDidMount() {
     this.getNextImage();
@@ -16,21 +19,29 @@ class App extends Component {
     fetch("https://dog.ceo/api/breeds/image/random")
       .then((response) => { return response.json() })
       .then(({ message, status }) => {
-        this.setState({ message, status });
+        this.addDog(message);
         setTimeout(this.getNextImage, 2000);
     })
   }
   
+  addDog = (dog) => {
+    const { dogs } = this.state;
+    
+    if (dogs.length > 5)
+      dogs.shift();
+    dogs.push(dog);
+    
+    this.setState({ dogs });
+  }
+  
   render() {
+    const { dogs } = this.state;
+    
     return (
       <div className="App">
-        <div className="Top">
-          <img src={this.state.message} className="App-logo" />
-        </div>
-        <div className="Bottom">
-          <p className="App-intro">{this.state.message}</p>
-          <small>{this.state.status}</small>
-        </div>
+        {
+          dogs.map((dog) => { return <img className="Dog" src={dog} /> });
+        }
       </div>
     );
   }
